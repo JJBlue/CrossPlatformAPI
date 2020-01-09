@@ -8,4 +8,5 @@ public class PowerStates {
 	
 	public native static void reboot();
 	public native static void logoff();
+	public native static void lockScreen();
 }

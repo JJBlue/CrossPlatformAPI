@@ -6,9 +6,6 @@ public class NativeKeyboard {
 	
 	public native short getKeyState(int key);
 	
-	public native void startHooking();
-	public native void stopHooking();
-	
 	public native void pressKey(int key);
 	public native void releaseKey(int key);
 }

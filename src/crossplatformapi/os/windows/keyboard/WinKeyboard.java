@@ -30,4 +30,10 @@ public class WinKeyboard implements Keyboard {
 		// TODO Auto-generated method stub
 	}
 
+	@Override
+	public String getKeyboarLanguage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
