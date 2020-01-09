@@ -1,0 +1,1 @@
+javac -h c -d target java/recipeNo001/HelloWorld.java		//Create the header of a .class file

@@ -1,6 +1,6 @@
 package crossplatformapi.jni.keyboard;
 
-public class NativKeyboard {
+public class NativeKeyboard {
 	public native boolean registerHotKey(int id, int modifires, int key);
 	public native boolean unregisterHotKey(int id);
 	
