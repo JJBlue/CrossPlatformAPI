@@ -1,7 +1,7 @@
 package crossplatformapi.jni.users;
 
 public class User {
-	public native String getUsername();
+	public native static String getUsername();
 	
 	
 }

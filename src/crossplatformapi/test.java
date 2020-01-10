@@ -1,6 +1,7 @@
 package crossplatformapi;
 
 import crossplatformapi.jni.keyboard.KeyboardListener;
+import crossplatformapi.jni.keyboard.NativeKeyboard;
 import crossplatformapi.main.LibraryLoader;
 
 public class test {
@@ -11,6 +12,7 @@ public class test {
 		
 		new Thread(() -> {
 //			MouseListener.registerListener();
+			NativeKeyboard.registerHotKey(1, 0, 83);
 			KeyboardListener.registerListener();
 		}).start();		
 		
