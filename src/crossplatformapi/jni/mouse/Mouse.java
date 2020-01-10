@@ -3,9 +3,9 @@ package crossplatformapi.jni.mouse;
 public class Mouse {
 	//Use java.awt.Robot
 	
-//	public native void press();
-//	public native void release();
-//	public native void click();
-//	
-//	public native void move(int x, int y);
+	public native static void press(int button);
+	public native static void release(int button);
+	public native static void click(int button);
+	
+	public native static void move(long x, long y);
 }

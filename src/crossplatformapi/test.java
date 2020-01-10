@@ -1,13 +1,13 @@
 package crossplatformapi;
 
-import crossplatformapi.jni.network.Network;
+import crossplatformapi.jni.mouse.Mouse;
 import crossplatformapi.main.LibraryLoader;
 
 public class test {
 	public static void main(String[] args) {
 		System.out.println("start");
 		LibraryLoader.loadWindows();
-		System.out.println(Network.isConnected());
+		Mouse.press(0);
 		
 //		new Thread(() -> {
 //			MouseListener.registerListener();
