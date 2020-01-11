@@ -8,4 +8,7 @@ public class NativeKeyboard {
 	
 	public native static void pressKey(int key);
 	public native static void releaseKey(int key);
+	
+	public native static String getKeyboardLayout();
+	public native static String getPhysicalLayout();
 }
