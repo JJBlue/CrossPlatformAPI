@@ -4,7 +4,7 @@ public class NativeKeyboard {
 	public native static boolean registerHotKey(int id, int modifires, int key);
 	public native static boolean unregisterHotKey(int id);
 	
-	public native static short getKeyState(int key);
+	public native static boolean isKeyPressed(int key);
 	
 	public native static void pressKey(int key);
 	public native static void releaseKey(int key);

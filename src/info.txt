@@ -4,3 +4,4 @@ TODO:
 
 Network
 Mouse visible on whole desktop
+Window
