@@ -13,6 +13,10 @@ public class MouseEventReceiver {
 		System.out.println("Scroll: " + delta);
 	}
 	
+	public static void hscroll(long delta) {
+		System.out.println("HScroll: " + delta);
+	}
+	
 	public static void press(int id) {
 		System.out.println("press: " + id);
 	}
