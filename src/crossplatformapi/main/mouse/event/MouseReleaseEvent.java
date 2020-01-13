@@ -3,11 +3,13 @@ package crossplatformapi.main.mouse.event;
 import crossplatformapi.main.mouse.MouseButton;
 
 public class MouseReleaseEvent extends MouseEvent {
-	final int buttonCode;
-	final MouseButton button;
+	private static final long serialVersionUID = -2867289076613876705L;
 	
-	public MouseReleaseEvent(int buttonCode, MouseButton button) {
-		this.button = button;
+	int buttonCode;
+	MouseButton button;
+	
+	public MouseReleaseEvent(int buttonCode) {
+//		this.button = Mouse.getMouse();//TODO
 		this.buttonCode = buttonCode;
 	}
 	

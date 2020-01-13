@@ -6,7 +6,7 @@ import crossplatformapi.main.os.OS;
 public class Mouse {
 	//TODO
 	
-	public static IMouse getKeyboard() {
+	public static IMouse getMouse() {
 		return OS.getOperatingSystem().getMouse();
 	}
 }
