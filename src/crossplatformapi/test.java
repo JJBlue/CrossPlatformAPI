@@ -1,21 +1,26 @@
 package crossplatformapi;
 
-import crossplatformapi.main.os.LibraryLoader;
+import crossplatformapi.jni.mouse.NativeMouse;
 
 public class test {
 	public static void main(String[] args) {
 //		System.out.println("start");
 		
-//		System.getProperties().list(System.out);
+		System.getProperties().list(System.out);
 		
-		try {
-			Thread.sleep(4_000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+//		LibraryLoader.loadLibrary();
+//		
+//		try {
+//			Thread.sleep(1_000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		load();
+//		
+//		System.out.println("end");
 		
 		
-		LibraryLoader.loadLibrary();
 		
 //		Mouse.scroll(-120);
 //		Mouse.hscroll(120);
@@ -38,6 +43,43 @@ public class test {
 //		}
 //		
 //		System.exit(1);
+	}
+	
+	public static void load() {
+		int round = 0;
+		
+		int radius = 150;
+		
+		int mx = 1920 / 2;
+		int my = 1080 / 2;
+		
+		int x = mx - radius;
+		int y = my - radius;
+		
+		int winkel = 0;
+		
+		NativeMouse.move(x, y);
+		
+		while(round < 10) {
+			
+			x = (int) (mx + radius * Math.cos(Math.toRadians(winkel)));
+			y = (int) (my + radius * Math.sin(Math.toRadians(winkel)));
+			
+			NativeMouse.move(x, y);
+			
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+			winkel++;
+			
+			if(winkel == 359) {
+				winkel = 0;
+				round++;
+			}
+		}
 	}
 }
 

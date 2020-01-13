@@ -5,10 +5,12 @@ import crossplatformapi.interfaces.mouse.IMouse;
 import crossplatformapi.interfaces.os.IOperatingSystem;
 import crossplatformapi.main.os.OperatingSystem;
 import crossplatformapi.os.windows.keyboard.WinKeyboard;
+import crossplatformapi.os.windows.mouse.WinMouse;
 
 public class WinOS implements IOperatingSystem {
 
 	WinKeyboard keyboard = new WinKeyboard();
+	WinMouse mouse = new WinMouse();
 	boolean loadLibrary;
 	
 	@Override
@@ -30,8 +32,7 @@ public class WinOS implements IOperatingSystem {
 
 	@Override
 	public IMouse getMouse() {
-		// TODO Auto-generated method stub
-		return null;
+		return mouse;
 	}
 
 }
