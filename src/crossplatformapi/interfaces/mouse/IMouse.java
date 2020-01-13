@@ -2,7 +2,7 @@ package crossplatformapi.interfaces.mouse;
 
 import crossplatformapi.main.mouse.MouseButton;
 
-public interface Mouse {
+public interface IMouse {
 	public void move(int x, int y);
 	
 	public void press(MouseButton button);

@@ -1,12 +1,12 @@
 package crossplatformapi.os.windows.keyboard;
 
 import components.map.TWMap;
-import crossplatformapi.interfaces.keyboard.Keyboard;
+import crossplatformapi.interfaces.keyboard.IKeyboard;
 import crossplatformapi.jni.keyboard.KeyboardListener;
 import crossplatformapi.jni.keyboard.NativeKeyboard;
 import crossplatformapi.main.keyboard.Key;
 
-public class WinKeyboard implements Keyboard {
+public class WinKeyboard implements IKeyboard {
 	
 	TWMap<Key, Integer> map = new TWMap<>();
 	

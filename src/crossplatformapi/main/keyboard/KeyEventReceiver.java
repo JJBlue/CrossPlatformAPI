@@ -1,7 +1,5 @@
 package crossplatformapi.main.keyboard;
 
-import crossplatformapi.main.events.Event;
-import crossplatformapi.main.keyboard.event.KeyPressedEvent;
 import crossplatformapi.os.windows.keyboard.WinKeyboard;
 
 public class KeyEventReceiver {
