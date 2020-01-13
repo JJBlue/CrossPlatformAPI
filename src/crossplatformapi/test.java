@@ -1,15 +1,16 @@
 package crossplatformapi;
 
+import crossplatformapi.jni.keyboard.KeyboardListener;
 import crossplatformapi.jni.mouse.NativeMouse;
+import crossplatformapi.main.os.LibraryLoader;
 
 public class test {
 	public static void main(String[] args) {
 //		System.out.println("start");
+//		System.getProperties().list(System.out);
 		
-		System.getProperties().list(System.out);
+		LibraryLoader.loadLibrary();
 		
-//		LibraryLoader.loadLibrary();
-//		
 //		try {
 //			Thread.sleep(1_000);
 //		} catch (InterruptedException e) {
@@ -17,32 +18,27 @@ public class test {
 //		}
 //		
 //		load();
-//		
-//		System.out.println("end");
-		
 		
 		
 //		Mouse.scroll(-120);
 //		Mouse.hscroll(120);
 		
-//		System.out.println("end");
-		
 		//0000000004070407 1031 1031
 //		NativeKeyboard.getKeyboardLayout();
 //		WinKeyboard keyboard = new WinKeyboard();
 		
-//		new Thread(() -> {
+		new Thread(() -> {
 //			MouseListener.registerListener();
-////			KeyboardListener.registerListener();
-//		}).start();
-//		
-//		try {
-//			Thread.sleep(5_000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		System.exit(1);
+			KeyboardListener.registerListener();
+		}).start();
+		
+		try {
+			Thread.sleep(5_000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		System.exit(0);
 	}
 	
 	public static void load() {
