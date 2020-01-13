@@ -6,7 +6,7 @@ import crossplatformapi.main.os.OS;
 public class Keyboard {
 	//TODO
 	
-	private static IKeyboard getKeyboard() {
+	public static IKeyboard getKeyboard() {
 		return OS.getOperatingSystem().getKeyboard();
 	}
 }

@@ -1,10 +1,6 @@
 package crossplatformapi.main.mouse;
 
 public class MouseEventReceiver {
-	public static void mouseReceiver(long x, long y) {
-		
-	}
-	
 	public static void move(long x, long y) {
 		System.out.println("Move: " + x + " " + y);
 	}

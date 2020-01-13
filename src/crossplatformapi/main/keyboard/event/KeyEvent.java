@@ -2,16 +2,21 @@ package crossplatformapi.main.keyboard.event;
 
 import crossplatformapi.main.events.Event;
 import crossplatformapi.main.keyboard.Key;
+import crossplatformapi.main.keyboard.Keyboard;
 
 public class KeyEvent extends Event {
-	final int keycode;
-	final Key key;
+	private static final long serialVersionUID = 4123873419383461631L;
 	
-	public KeyEvent(int keycode, Key key) {
+	int keycode;
+	Key key;
+	
+	KeyEvent() {}
+	
+	public KeyEvent(int keycode) {
 		this.keycode = keycode;
-		this.key = key;
+		key = Keyboard.getKeyboard().intToKey(keycode);
 	}
-	
+		
 	int getKeyCode() {
 		return keycode;
 	}
