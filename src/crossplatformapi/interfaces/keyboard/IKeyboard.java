@@ -12,7 +12,4 @@ public interface IKeyboard {
 	public void type(Key key);
 	
 	public String getKeyboarLanguage();
-	
-	public void createKeyListener();
-	public void deleteKeyListener();
 }

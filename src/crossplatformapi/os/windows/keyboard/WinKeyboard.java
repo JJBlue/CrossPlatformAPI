@@ -2,7 +2,6 @@ package crossplatformapi.os.windows.keyboard;
 
 import components.map.TWMap;
 import crossplatformapi.interfaces.keyboard.IKeyboard;
-import crossplatformapi.jni.keyboard.KeyboardListener;
 import crossplatformapi.jni.keyboard.NativeKeyboard;
 import crossplatformapi.main.keyboard.Key;
 
@@ -214,16 +213,6 @@ public class WinKeyboard implements IKeyboard {
 	public void type(Key key) {
 		press(key);
 		release(key);
-	}
-
-	@Override
-	public void createKeyListener() {
-		KeyboardListener.registerListener();
-	}
-
-	@Override
-	public void deleteKeyListener() {
-		KeyboardListener.unregisterListener();
 	}
 
 	@Override
