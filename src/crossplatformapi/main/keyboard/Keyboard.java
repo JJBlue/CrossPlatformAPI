@@ -2,23 +2,37 @@ package crossplatformapi.main.keyboard;
 
 import crossplatformapi.interfaces.keyboard.IKeyboard;
 import crossplatformapi.jni.keyboard.KeyboardListener;
+import crossplatformapi.jni.keyboard.NativeKeyboard;
 import crossplatformapi.main.os.OS;
 
 public class Keyboard {
 	public static void press(Key key) {
-		getKeyboard().press(key);
+		NativeKeyboard.pressKey(getKeyboard().keyToInt(key));
 	}
 	
 	public static void release(Key key) {
-		getKeyboard().release(key);
+		NativeKeyboard.releaseKey(getKeyboard().keyToInt(key));
 	}
 	
 	public static void type(Key key) {
-		getKeyboard().type(key);
+		release(key);
+		press(key);
+	}
+	
+	public static void registerHotKey(int ID, Key key, int modifires) { //TODO
+		NativeKeyboard.registerHotKey(ID, modifires, getKeyboard().keyToInt(key));
+	}
+	
+	public static void unregisterHotKey(int id) {
+		NativeKeyboard.unregisterHotKey(id);
+	}
+	
+	public static boolean isKeyPressed(Key key) {
+		return NativeKeyboard.isKeyPressed(getKeyboard().keyToInt(key));
 	}
 	
 	public static String getKeyboarLanguage() {
-		return getKeyboard().getKeyboarLanguage();
+		return NativeKeyboard.getKeyboardLayout();
 	}
 	
 	/**

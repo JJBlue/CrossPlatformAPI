@@ -2,7 +2,6 @@ package crossplatformapi.os.windows.keyboard;
 
 import components.map.TWMap;
 import crossplatformapi.interfaces.keyboard.IKeyboard;
-import crossplatformapi.jni.keyboard.NativeKeyboard;
 import crossplatformapi.main.keyboard.Key;
 
 public class WinKeyboard implements IKeyboard {
@@ -197,26 +196,5 @@ public class WinKeyboard implements IKeyboard {
 	@Override
 	public Key intToKey(int key) {
 		return map.get2(key);
-	}
-	
-	@Override
-	public void press(Key key) {
-		NativeKeyboard.pressKey(keyToInt(key));
-	}
-
-	@Override
-	public void release(Key key) {
-		NativeKeyboard.releaseKey(keyToInt(key));
-	}
-
-	@Override
-	public void type(Key key) {
-		press(key);
-		release(key);
-	}
-
-	@Override
-	public String getKeyboarLanguage() {
-		return NativeKeyboard.getKeyboardLayout();
 	}
 }
