@@ -1,13 +1,26 @@
 package crossplatformapi;
 
+import crossplatformapi.main.os.LibraryLoader;
+
 public class test {
 	public static void main(String[] args) {
-		System.out.println("start");
+//		System.out.println("start");
 		
 //		System.getProperties().list(System.out);
 		
+		try {
+			Thread.sleep(4_000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		
-//		LibraryLoader.loadWindows();
+		
+		LibraryLoader.loadLibrary();
+		
+//		Mouse.scroll(-120);
+//		Mouse.hscroll(120);
+		
+//		System.out.println("end");
 		
 		//0000000004070407 1031 1031
 //		NativeKeyboard.getKeyboardLayout();
@@ -15,8 +28,7 @@ public class test {
 		
 //		new Thread(() -> {
 //			MouseListener.registerListener();
-//			NativeKeyboard.registerHotKey(1, 0, 83);
-//			KeyboardListener.registerListener();
+////			KeyboardListener.registerListener();
 //		}).start();
 //		
 //		try {
@@ -28,3 +40,82 @@ public class test {
 //		System.exit(1);
 	}
 }
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
