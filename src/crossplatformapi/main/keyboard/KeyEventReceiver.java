@@ -5,11 +5,8 @@ import crossplatformapi.main.events.EventManager;
 import crossplatformapi.main.keyboard.event.HotKeyPressedEvent;
 import crossplatformapi.main.keyboard.event.KeyPressedEvent;
 import crossplatformapi.main.keyboard.event.KeyReleasedEvent;
-import crossplatformapi.os.windows.keyboard.WinKeyboard;
 
 public class KeyEventReceiver {
-	static WinKeyboard keyboard = new WinKeyboard();//TODO
-	
 	public static void press(long key, boolean control, boolean windows, boolean alt, boolean shift) {
 		Event event = new KeyPressedEvent((int) key);
 		EventManager.callAsync(event);
