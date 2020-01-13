@@ -3,5 +3,16 @@ javac -h c -d target java/recipeNo001/HelloWorld.java		//Create the header of a 
 TODO:
 
 Network
-Mouse visible on whole desktop
+	- Name
+	- Disable
+	- WLAN/LAN enabled?
 Window
+	- current window
+		- name
+		- size
+		- minimize
+		- onTop
+		- close
+Monitors
+	- resolution
+	- position
