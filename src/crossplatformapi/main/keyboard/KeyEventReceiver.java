@@ -23,6 +23,6 @@ public class KeyEventReceiver {
 	}
 	
 	public static void releaseHotKey(long id) {
-		
+		//TODO Not supported yet? Windows doesn't support release of HotKey
 	}
 }

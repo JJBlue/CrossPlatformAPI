@@ -1,6 +1,10 @@
 package crossplatformapi;
 
+import crossplatformapi.jni.keyboard.KeyboardListener;
+import crossplatformapi.jni.keyboard.NativeKeyboard;
 import crossplatformapi.jni.mouse.NativeMouse;
+import crossplatformapi.main.keyboard.Key;
+import crossplatformapi.main.keyboard.Keyboard;
 import crossplatformapi.main.os.LibraryLoader;
 
 public class test {
@@ -10,13 +14,14 @@ public class test {
 		
 		LibraryLoader.loadLibrary();
 		
-//		try {
-//			Thread.sleep(1_000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		load();
+		
+		try {
+			Thread.sleep(1_000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		load();
 		
 //		Mouse.hscroll(120);
 		
@@ -26,6 +31,21 @@ public class test {
 ////			MouseListener.registerListener();
 //			KeyboardListener.registerListener();
 //		}).start();
+//		
+//		try {
+//			Thread.sleep(1_000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		StringBuilder builder = new StringBuilder();
+//		
+//		for(int i = 0; i < 500; i++) {
+//			builder.append("");
+//		}
+//		
+//		NativeKeyboard.write(builder.toString());
+//		Keyboard.type(Key.RETURN);
 //		
 //		try {
 //			Thread.sleep(5_000);

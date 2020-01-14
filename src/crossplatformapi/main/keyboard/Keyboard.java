@@ -19,6 +19,10 @@ public class Keyboard {
 		press(key);
 	}
 	
+	public static void write(String text) {
+		NativeKeyboard.write(text);
+	}
+	
 	public static void registerHotKey(int ID, Key key, ModifierValue modifires) {
 		NativeKeyboard.registerHotKey(ID, modifires != null ? modifires.getModifierAsNumber() : 0, getKeyboard().keyToInt(key));
 	}
@@ -36,7 +40,7 @@ public class Keyboard {
 	}
 	
 	/**
-	 * register is maybe async?? TODO: Programming in JAVA
+	 * register is maybe async?? TODO: Programming in JAVA, because Windows will never return from this function until unregisterKeyListener() will be called
 	 */
 	public static void registerKeyListener() {
 		KeyboardListener.registerListener();
