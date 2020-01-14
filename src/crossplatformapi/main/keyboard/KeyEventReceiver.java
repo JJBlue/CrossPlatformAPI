@@ -7,13 +7,13 @@ import crossplatformapi.main.keyboard.event.KeyPressedEvent;
 import crossplatformapi.main.keyboard.event.KeyReleasedEvent;
 
 public class KeyEventReceiver {
-	public static void press(long key, boolean control, boolean windows, boolean alt, boolean shift) {
-		Event event = new KeyPressedEvent((int) key);
+	public static void press(long key, long modifier) {
+		Event event = new KeyPressedEvent(key, modifier);
 		EventManager.callAsync(event);
 	}
 	
-	public static void release(long key, boolean control, boolean windows, boolean alt, boolean shift) {
-		Event event = new KeyReleasedEvent((int) key);
+	public static void release(long key, long modifier) {
+		Event event = new KeyReleasedEvent(key, modifier);
 		EventManager.callAsync(event);
 	}
 	

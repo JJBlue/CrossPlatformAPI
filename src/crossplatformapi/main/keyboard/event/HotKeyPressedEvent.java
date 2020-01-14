@@ -7,7 +7,7 @@ public class HotKeyPressedEvent extends KeyEvent {
 		keycode = id;
 	}
 	
-	public int getID() {
+	public long getID() {
 		return getKeyCode();
 	}
 }

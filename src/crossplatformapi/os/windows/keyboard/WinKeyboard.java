@@ -3,10 +3,12 @@ package crossplatformapi.os.windows.keyboard;
 import components.map.TWMap;
 import crossplatformapi.interfaces.keyboard.IKeyboard;
 import crossplatformapi.main.keyboard.Key;
+import crossplatformapi.main.keyboard.Modifier;
 
 public class WinKeyboard implements IKeyboard {
 	
 	TWMap<Key, Integer> map = new TWMap<>();
+	TWMap<Modifier, Integer> modifiers = new TWMap<>();
 	
 	public WinKeyboard() {
 		initKeyboard();
@@ -186,6 +188,12 @@ public class WinKeyboard implements IKeyboard {
 		map.put(Key.NONAME, 0xFC);
 		map.put(Key.PA1, 0xFD);
 		map.put(Key.OEM_CLEAR, 0xFE);
+		
+		modifiers.put(Modifier.ALT, 0x0001);
+		modifiers.put(Modifier.CONTROL, 0x0002);
+		modifiers.put(Modifier.SHIFT, 0x0004);
+		modifiers.put(Modifier.WINDOWS, 0x0008);
+		modifiers.put(Modifier.NoRepeat, 0x4000);
 	}
 	
 	@Override
@@ -196,5 +204,15 @@ public class WinKeyboard implements IKeyboard {
 	@Override
 	public Key intToKey(int key) {
 		return map.get2(key);
+	}
+
+	@Override
+	public int modifierToInt(Modifier modifier) {
+		return modifiers.get1(modifier);
+	}
+
+	@Override
+	public Modifier intToModifier(int modifier) {
+		return modifiers.get2(modifier);
 	}
 }

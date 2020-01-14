@@ -19,8 +19,8 @@ public class Keyboard {
 		press(key);
 	}
 	
-	public static void registerHotKey(int ID, Key key, int modifires) { //TODO
-		NativeKeyboard.registerHotKey(ID, modifires, getKeyboard().keyToInt(key));
+	public static void registerHotKey(int ID, Key key, ModifierValue modifires) {
+		NativeKeyboard.registerHotKey(ID, modifires != null ? modifires.getModifierAsNumber() : 0, getKeyboard().keyToInt(key));
 	}
 	
 	public static void unregisterHotKey(int id) {

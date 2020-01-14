@@ -1,8 +1,9 @@
 package crossplatformapi.main.keyboard;
 
-public enum Modifiers {
+public enum Modifier {
 	ALT,
-	WINDOWS,
 	CONTROL,
+	SHIFT,
+	WINDOWS,
 	NoRepeat
 }
