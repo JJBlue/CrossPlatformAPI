@@ -17,14 +17,6 @@ JNIEXPORT jlong JNICALL Java_crossplatformapi_jni_window_NativeWindow_getWindowI
 
 /*
  * Class:     crossplatformapi_jni_window_NativeWindow
- * Method:    getWindowByTitle
- * Signature: (Ljava/lang/String;)J
- */
-JNIEXPORT jlong JNICALL Java_crossplatformapi_jni_window_NativeWindow_getWindowByTitle
-  (JNIEnv *, jclass, jstring);
-
-/*
- * Class:     crossplatformapi_jni_window_NativeWindow
  * Method:    getVisibleWindows
  * Signature: ()[J
  */
@@ -73,14 +65,6 @@ JNIEXPORT jlong JNICALL Java_crossplatformapi_jni_window_NativeWindow_getHeight
 
 /*
  * Class:     crossplatformapi_jni_window_NativeWindow
- * Method:    setMaximize
- * Signature: (JJ)V
- */
-JNIEXPORT void JNICALL Java_crossplatformapi_jni_window_NativeWindow_setMaximize
-  (JNIEnv *, jclass, jlong, jlong);
-
-/*
- * Class:     crossplatformapi_jni_window_NativeWindow
  * Method:    setTopMost
  * Signature: (JZ)V
  */
@@ -117,6 +101,54 @@ JNIEXPORT void JNICALL Java_crossplatformapi_jni_window_NativeWindow_toFront
  * Signature: (J)V
  */
 JNIEXPORT void JNICALL Java_crossplatformapi_jni_window_NativeWindow_toBack
+  (JNIEnv *, jclass, jlong);
+
+/*
+ * Class:     crossplatformapi_jni_window_NativeWindow
+ * Method:    maximize
+ * Signature: (J)V
+ */
+JNIEXPORT void JNICALL Java_crossplatformapi_jni_window_NativeWindow_maximize
+  (JNIEnv *, jclass, jlong);
+
+/*
+ * Class:     crossplatformapi_jni_window_NativeWindow
+ * Method:    minimize
+ * Signature: (J)V
+ */
+JNIEXPORT void JNICALL Java_crossplatformapi_jni_window_NativeWindow_minimize
+  (JNIEnv *, jclass, jlong);
+
+/*
+ * Class:     crossplatformapi_jni_window_NativeWindow
+ * Method:    restore
+ * Signature: (J)V
+ */
+JNIEXPORT void JNICALL Java_crossplatformapi_jni_window_NativeWindow_restore
+  (JNIEnv *, jclass, jlong);
+
+/*
+ * Class:     crossplatformapi_jni_window_NativeWindow
+ * Method:    hide
+ * Signature: (J)V
+ */
+JNIEXPORT void JNICALL Java_crossplatformapi_jni_window_NativeWindow_hide
+  (JNIEnv *, jclass, jlong);
+
+/*
+ * Class:     crossplatformapi_jni_window_NativeWindow
+ * Method:    show
+ * Signature: (J)V
+ */
+JNIEXPORT void JNICALL Java_crossplatformapi_jni_window_NativeWindow_show
+  (JNIEnv *, jclass, jlong);
+
+/*
+ * Class:     crossplatformapi_jni_window_NativeWindow
+ * Method:    close
+ * Signature: (J)V
+ */
+JNIEXPORT void JNICALL Java_crossplatformapi_jni_window_NativeWindow_close
   (JNIEnv *, jclass, jlong);
 
 #ifdef __cplusplus

@@ -1,13 +1,7 @@
 package crossplatformapi;
 
-import com.sun.java.swing.plaf.windows.WindowsOptionPaneUI;
-
-import crossplatformapi.jni.keyboard.KeyboardListener;
-import crossplatformapi.jni.keyboard.NativeKeyboard;
 import crossplatformapi.jni.mouse.NativeMouse;
 import crossplatformapi.jni.window.NativeWindow;
-import crossplatformapi.main.keyboard.Key;
-import crossplatformapi.main.keyboard.Keyboard;
 import crossplatformapi.main.os.LibraryLoader;
 
 public class test {
@@ -17,9 +11,26 @@ public class test {
 		
 		LibraryLoader.loadLibrary();
 		
-		long window = NativeWindow.getWindowInForeground();
-		System.out.println(window);
-		NativeWindow.setTopMost(window, false);
+//		long window = NativeWindow.getWindowInForeground();
+//		System.out.println(window);
+//		System.out.println(NativeWindow.getTitle(window));
+		
+		for(long l : NativeWindow.getVisibleWindows()) {
+			System.out.println(l + " " + NativeWindow.getTitle(l));
+//			if(NativeWindow.getTitle(l).contains("O")) {
+//				NativeWindow.close(l);
+//			}
+		}
+		
+		
+//		try {
+//			Thread.sleep(5_000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//		NativeKeyboard.write("hello");
+//		System.out.println("end");
+		
 		
 //		Mouse.hscroll(120);
 		
