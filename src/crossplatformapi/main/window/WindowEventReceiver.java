@@ -1,6 +1,10 @@
 package crossplatformapi.main.window;
 
 public class WindowEventReceiver {
+	public static void maximized(long window) {
+		
+	}
+	
 	public static void minimized(long window) {
 		
 	}

@@ -32,6 +32,9 @@ public class NativeWindow {
 	public native static void toFront(long window);
 	public native static void toBack(long window);
 	
+	public native static boolean isMaximized(long window);
+	public native static boolean isMinimized(long window);
+	
 	public native static void maximize(long window);
 	public native static void minimize(long window);
 	public native static void restore(long window);
