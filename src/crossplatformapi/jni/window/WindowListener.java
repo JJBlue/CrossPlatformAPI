@@ -7,6 +7,6 @@ public class WindowListener {
 	 * Changed:
 	 * Window in foreground, size, position
 	 */
-	public native static void rigsterListener();
-	public native static void unrigsterListener();
+	public native static void registerListener();
+	public native static void unregisterListener();
 }

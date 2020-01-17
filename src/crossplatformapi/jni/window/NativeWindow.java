@@ -6,7 +6,16 @@ public class NativeWindow {
 	 */
 	public native static long getWindowInForeground();
 	
-	public native static long[] getVisibleWindows();
+	/**
+	 * @return should return windows, wich are user windows.
+	 * For example, the taskbar is not a user window.
+	 * Users Windows in Windows are for example all windows, wich are shown in ALT+TAB
+	 */
+	public native static long[] getUserWindows();
+	/**
+	 * @return all windows. Could maybe the same result as getUserWindows() in some systems.
+	 */
+	public native static long[] getAllWindows();
 	
 	public native static String getTitle(long window);
 	

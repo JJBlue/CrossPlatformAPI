@@ -5,6 +5,7 @@ javac -h c -d target src/crossplatformapi/jni/mouse/NativeMouse.java
 javac -h c -d target src/crossplatformapi/jni/mouse/MouseListener.java
 
 javac -h c -d target src/crossplatformapi/jni/window/NativeWindow.java
+javac -h c -d target src/crossplatformapi/jni/window/WindowListener.java
 
 javac -h c -d target src/crossplatformapi/jni/network/Network.java
 

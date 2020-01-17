@@ -1,27 +1,26 @@
 package crossplatformapi;
 
 import crossplatformapi.jni.mouse.NativeMouse;
-import crossplatformapi.jni.window.NativeWindow;
+import crossplatformapi.jni.window.WindowListener;
 import crossplatformapi.main.os.LibraryLoader;
 
 public class test {
 	public static void main(String[] args) {
-//		System.out.println("start");
+		//0000000004070407 1031 1031
+		System.out.println("start");
 //		System.getProperties().list(System.out);
 		
 		LibraryLoader.loadLibrary();
 		
 //		long window = NativeWindow.getWindowInForeground();
 //		System.out.println(window);
-//		System.out.println(NativeWindow.getTitle(window));
+//		System.out.println(NativeWindow.getTitle(0x360A22));
 		
-		for(long l : NativeWindow.getVisibleWindows()) {
-			System.out.println(l + " " + NativeWindow.getTitle(l));
-//			if(NativeWindow.getTitle(l).contains("O")) {
-//				NativeWindow.close(l);
-//			}
-		}
-		
+//		for(long l : NativeWindow.getUserWindows()) {
+//			System.out.println(NativeWindow.getTitle(l));
+//		}
+//		
+//		System.exit(1);
 		
 //		try {
 //			Thread.sleep(5_000);
@@ -30,39 +29,21 @@ public class test {
 //		}
 //		NativeKeyboard.write("hello");
 //		System.out.println("end");
-		
-		
 //		Mouse.hscroll(120);
 		
-		//0000000004070407 1031 1031
-		
-//		new Thread(() -> {
-////			MouseListener.registerListener();
+		new Thread(() -> {
+//			MouseListener.registerListener();
 //			KeyboardListener.registerListener();
-//		}).start();
-//		
-//		try {
-//			Thread.sleep(1_000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		StringBuilder builder = new StringBuilder();
-//		
-//		for(int i = 0; i < 500; i++) {
-//			builder.append("");
-//		}
-//		
-//		NativeKeyboard.write(builder.toString());
-//		Keyboard.type(Key.RETURN);
-//		
-//		try {
-//			Thread.sleep(5_000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		System.exit(0);
+			WindowListener.registerListener();
+		}).start();
+		
+		try {
+			Thread.sleep(5_000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		System.exit(0);
 	}
 	
 	public static void load() {
