@@ -17,10 +17,18 @@ JNIEXPORT jlong JNICALL Java_crossplatformapi_jni_window_NativeWindow_getWindowI
 
 /*
  * Class:     crossplatformapi_jni_window_NativeWindow
- * Method:    getVisibleWindows
+ * Method:    getUserWindows
  * Signature: ()[J
  */
-JNIEXPORT jlongArray JNICALL Java_crossplatformapi_jni_window_NativeWindow_getVisibleWindows
+JNIEXPORT jlongArray JNICALL Java_crossplatformapi_jni_window_NativeWindow_getUserWindows
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     crossplatformapi_jni_window_NativeWindow
+ * Method:    getAllWindows
+ * Signature: ()[J
+ */
+JNIEXPORT jlongArray JNICALL Java_crossplatformapi_jni_window_NativeWindow_getAllWindows
   (JNIEnv *, jclass);
 
 /*
