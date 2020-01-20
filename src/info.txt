@@ -1,4 +1,4 @@
-javac -h c -d target java/recipeNo001/HelloWorld.java		//Create the header of a .class file
+javac -h c -d target java/dad/HelloWorld.java		//Create the header of a .class file
 
 TODO:
 
@@ -6,9 +6,6 @@ Network
 	- Name
 	- Disable
 	- WLAN/LAN enabled?
-Monitors
-	- resolution
-	- position
 Background processes:
 	- pid
 	- kill
