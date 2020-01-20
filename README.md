@@ -8,6 +8,9 @@ Methods and Classes could be changed in the future. Everything is subject to cha
 # About me
 I'm a student and work on this project in my free time.
 
+# Discord
+[Come to our discord server](https://discord.gg/K7QvyXw)
+
 # Platforms
 At the moment, only windows is supported. Other platforms will be added in the future.
 
@@ -18,11 +21,11 @@ At the moment, only windows is supported. Other platforms will be added in the f
 
 | Package  | Information |
 | -------- | ----------- |
-| jni.\*    | JNI Interfaces  |
+| jni.\*    | JNI Interfaces. All JNI Interfaces will be called by an class in the main.\* package |
 | main.\*   | Methods and Classes which can be used by another Java project. Some Classes call in the background the JNI Interfaces. (or JNI Interfaces can be called directly) |
 | interfaces.\*    | Some Interfaces for the main.\* packages|
 
-# TITLE MISSING
+# Some Content
 
 - Keyboard
 - Mouse
@@ -103,4 +106,4 @@ Rules:
 - Extensions and bug fixes have to be pushed and not distributed themselves
 
 ## I have some new ideas/bugs
-If you have some new ideas or bugs, please create a issues for it.
+If you have some new ideas or bugs, please create a issues for it or write it on discord.
