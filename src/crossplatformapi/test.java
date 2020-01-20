@@ -55,7 +55,7 @@ public class test {
 //		System.exit(0);
 	}
 	
-	public static void load() {
+	public static void mouseMoveInCircle() {
 		int round = 0;
 		
 		int radius = 150;
