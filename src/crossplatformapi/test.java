@@ -1,5 +1,6 @@
 package crossplatformapi;
 
+import crossplatformapi.jni.display.NativeDisplay;
 import crossplatformapi.jni.mouse.NativeMouse;
 import crossplatformapi.jni.window.NativeWindow;
 import crossplatformapi.jni.window.WindowListener;
@@ -13,6 +14,12 @@ public class test {
 //		System.getProperties().list(System.out);
 		
 		LibraryLoader.loadLibrary();
+		
+		for(long monitor : NativeDisplay.getDisplays()) {
+			System.out.println(monitor);
+			System.out.println(NativeDisplay.getHeight(monitor));
+			System.out.println(NativeDisplay.getWorkHeight(monitor));
+		}
 		
 //		long window = NativeWindow.getWindowInForeground();
 //		System.out.println(window);
@@ -33,19 +40,19 @@ public class test {
 //		System.out.println("end");
 //		Mouse.hscroll(120);
 		
-		new Thread(() -> {
-//			MouseListener.registerListener();
-//			KeyboardListener.registerListener();
-			WindowListener.registerListener();
-		}).start();
-		
-		try {
-			Thread.sleep(20_000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
-		System.exit(0);
+//		new Thread(() -> {
+////			MouseListener.registerListener();
+////			KeyboardListener.registerListener();
+//			WindowListener.registerListener();
+//		}).start();
+//		
+//		try {
+//			Thread.sleep(20_000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		System.exit(0);
 	}
 	
 	public static void load() {
