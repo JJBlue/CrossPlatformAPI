@@ -6,13 +6,6 @@ Network
 	- Name
 	- Disable
 	- WLAN/LAN enabled?
-Window
-	- current window
-		- name
-		- size
-		- minimize
-		- onTop
-		- close
 Monitors
 	- resolution
 	- position

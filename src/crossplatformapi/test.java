@@ -1,11 +1,13 @@
 package crossplatformapi;
 
 import crossplatformapi.jni.mouse.NativeMouse;
+import crossplatformapi.jni.window.NativeWindow;
 import crossplatformapi.jni.window.WindowListener;
 import crossplatformapi.main.os.LibraryLoader;
 
 public class test {
 	public static void main(String[] args) {
+		
 		//0000000004070407 1031 1031
 		System.out.println("start");
 //		System.getProperties().list(System.out);
@@ -38,7 +40,7 @@ public class test {
 		}).start();
 		
 		try {
-			Thread.sleep(5_000);
+			Thread.sleep(20_000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
