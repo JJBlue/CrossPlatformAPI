@@ -9,3 +9,7 @@ Network
 Monitors
 	- resolution
 	- position
+Background processes:
+	- pid
+	- kill
+	- ...

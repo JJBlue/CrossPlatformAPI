@@ -1,8 +1,9 @@
 package crossplatformapi.main.window;
 
+import crossplatformapi.interfaces.window.IWindow;
 import crossplatformapi.jni.window.NativeWindow;
 
-public class Window {
+public class Window implements IWindow {
 	
 	long window;
 	
