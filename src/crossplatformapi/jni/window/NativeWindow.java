@@ -7,9 +7,9 @@ public class NativeWindow {
 	public native static long getWindowInForeground();
 	
 	/**
-	 * @return should return windows, wich are user windows.
+	 * @return should return windows, which are user windows.
 	 * For example, the taskbar is not a user window.
-	 * Users Windows in Windows are for example all windows, wich are shown in ALT+TAB
+	 * Users Windows in Windows are for example all windows, which are shown in ALT+TAB
 	 */
 	public native static long[] getUserWindows();
 	/**
