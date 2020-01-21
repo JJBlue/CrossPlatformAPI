@@ -13,8 +13,8 @@ public class test {
 		LibraryLoader.loadLibrary();
 		
 		ProcessHandle.allProcesses().forEach(pro -> {
-			System.out.println(pro.pid());
-			System.out.println(pro.info());
+			System.out.print(pro.pid() + " ");
+			System.out.println(pro.info().command());
 		});
 		
 //		for(long monitor : NativeDisplay.getDisplays()) {

@@ -5,6 +5,13 @@ Maybe not all functions work on all platforms.<br>
 Methods and Classes could be changed in the future. Everything is subject to change.<br>
 Use it for your own risk.
 
+# Rules
+- Read the License (if it exists)
+- Do not say that the whole project was written by your own
+- Extensions and bug fixes (in a copy/fork of it) have to be pushed and not distributed themselves
+- Please do not add @author. If someone else edits the code, chaos will occur.
+- Please be nice. For example, if you post a problem.
+
 # About me
 I'm a student and work on this project in my free time.
 
@@ -25,11 +32,6 @@ At the moment, only windows is supported. Other platforms will be added in the f
 | crossplatformapi.main.\*   | Methods and Classes which can be used by another Java project. Some Classes call in the background the JNI Interfaces. (or JNI Interfaces can be called directly) |
 | crossplatformapi.interfaces.\*    | Some Interfaces for the main.\* packages |
 | components.\*    | Some Classes of my other project, which I use in this project too. For example the EventManager. |
-
-# Rules
-- Read the License (if it exists)
-- Do not say that the whole project was written by your own
-- Extensions and bug fixes (in this whole project or a copy of it) have to be pushed and not distributed themselves
 
 # Donation
 
