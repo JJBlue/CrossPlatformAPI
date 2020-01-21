@@ -49,4 +49,37 @@ public class ModifierValue {
 	public Set<Modifier> getModifiers() {
 		return modifiers;
 	}
+	
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		
+		for(Modifier modifier : modifiers) {
+			if(builder.length() > 0) {
+				builder.append(" + ");
+			}
+			
+			switch (modifier) {
+				case CONTROL:
+					builder.append("STRG");
+					break;
+				case ALT:
+					builder.append("ALT");
+					break;
+				case NoRepeat:
+					builder.append("NoRepeat");
+					break;
+				case SHIFT:
+					builder.append("SHIFT");
+					break;
+				case WINDOWS:
+					builder.append("WIN");
+					break;
+				default:
+					builder.append(modifier.name());
+					break;
+			}
+		}
+		
+		return builder.toString();
+	}
 }

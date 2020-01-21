@@ -33,9 +33,14 @@ public class OS {
 		String os = getOperatingSystemAsString();
 		os = os.trim().toLowerCase();
 		
-		if(os.contains("windows")) {
+		if(os.contains("win"))
 			return OperatingSystem.WINDOWS;
-		}
+		if(os.contains("osx") || os.contains("mac"))
+			return OperatingSystem.OS;
+		if (os.contains("nix") || os.contains("aix") || os.contains("nux"))
+			return OperatingSystem.UNIX;
+		if(os.contains("sunos"))
+			return OperatingSystem.SOLARIS;
 		
 		return null;
 	}

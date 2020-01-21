@@ -5,5 +5,9 @@ public enum Modifier {
 	CONTROL,
 	SHIFT,
 	WINDOWS,
-	NoRepeat
+	NoRepeat;
+	
+	public ModifierValue toModifierValue() {
+		return new ModifierValue(this);
+	}
 }
