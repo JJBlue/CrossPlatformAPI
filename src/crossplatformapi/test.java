@@ -1,5 +1,7 @@
 package crossplatformapi;
 
+import java.io.IOException;
+
 import crossplatformapi.jni.mouse.NativeMouse;
 import crossplatformapi.main.os.LibraryLoader;
 
@@ -11,35 +13,9 @@ public class test {
 //		System.getProperties().list(System.out);
 		
 		LibraryLoader.loadLibrary();
+		mouseMoveInCircle();
 		
-		ProcessHandle.allProcesses().forEach(pro -> {
-			System.out.print(pro.pid() + " ");
-			System.out.println(pro.info().command());
-		});
-		
-//		for(long monitor : NativeDisplay.getDisplays()) {
-//			System.out.println(monitor);
-//			System.out.println(NativeDisplay.getHeight(monitor));
-//			System.out.println(NativeDisplay.getWorkHeight(monitor));
-//		}
-		
-//		long window = NativeWindow.getWindowInForeground();
-//		System.out.println(window);
-//		System.out.println(NativeWindow.getTitle(0x360A22));
-		
-//		for(long l : NativeWindow.getUserWindows()) {
-//			System.out.println(NativeWindow.getTitle(l));
-//		}
-//		
-//		System.exit(1);
-		
-//		try {
-//			Thread.sleep(5_000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		NativeKeyboard.write("hello");
-//		System.out.println("end");
+
 //		Mouse.hscroll(120);
 		
 //		new Thread(() -> {
