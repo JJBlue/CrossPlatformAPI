@@ -1,9 +1,6 @@
 package crossplatformapi;
 
-import crossplatformapi.jni.display.NativeDisplay;
 import crossplatformapi.jni.mouse.NativeMouse;
-import crossplatformapi.jni.window.NativeWindow;
-import crossplatformapi.jni.window.WindowListener;
 import crossplatformapi.main.os.LibraryLoader;
 
 public class test {
@@ -15,11 +12,16 @@ public class test {
 		
 		LibraryLoader.loadLibrary();
 		
-		for(long monitor : NativeDisplay.getDisplays()) {
-			System.out.println(monitor);
-			System.out.println(NativeDisplay.getHeight(monitor));
-			System.out.println(NativeDisplay.getWorkHeight(monitor));
-		}
+		ProcessHandle.allProcesses().forEach(pro -> {
+			System.out.println(pro.pid());
+			System.out.println(pro.info());
+		});
+		
+//		for(long monitor : NativeDisplay.getDisplays()) {
+//			System.out.println(monitor);
+//			System.out.println(NativeDisplay.getHeight(monitor));
+//			System.out.println(NativeDisplay.getWorkHeight(monitor));
+//		}
 		
 //		long window = NativeWindow.getWindowInForeground();
 //		System.out.println(window);

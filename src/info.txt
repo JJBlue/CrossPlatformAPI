@@ -6,7 +6,9 @@ Network
 	- Name
 	- Disable
 	- WLAN/LAN enabled?
-Background processes:
-	- pid
-	- kill
-	- ...
+
+...
+
+
+Unsupported:
+	- Background processes -> Java 9 (ProcessHandle)

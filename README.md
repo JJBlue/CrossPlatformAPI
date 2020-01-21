@@ -1,9 +1,9 @@
 # CrossPlatformAPI
 
 Some useful JNI functions that Java does not yet support or supported different.<br>
-
 Maybe not all functions work on all platforms.<br>
-Methods and Classes could be changed in the future. Everything is subject to change.
+Methods and Classes could be changed in the future. Everything is subject to change.<br>
+Use it for your own risk.
 
 # About me
 I'm a student and work on this project in my free time.
@@ -21,9 +21,17 @@ At the moment, only windows is supported. Other platforms will be added in the f
 
 | Package  | Information |
 | -------- | ----------- |
-| jni.\*    | JNI Interfaces. All JNI Interfaces will be called by an class in the main.\* package |
-| main.\*   | Methods and Classes which can be used by another Java project. Some Classes call in the background the JNI Interfaces. (or JNI Interfaces can be called directly) |
-| interfaces.\*    | Some Interfaces for the main.\* packages|
+| crossplatformapi.jni.\*    | JNI Interfaces. All JNI Interfaces will be called by an class in the main.\* package |
+| crossplatformapi.main.\*   | Methods and Classes which can be used by another Java project. Some Classes call in the background the JNI Interfaces. (or JNI Interfaces can be called directly) |
+| crossplatformapi.interfaces.\*    | Some Interfaces for the main.\* packages |
+| components.\*    | Some Classes of my other project, which I use in this project too. For example the EventManager. |
+
+# Rules
+- Read the License (if it exists)
+- Do not say that the whole project was written by your own
+- Extensions and bug fixes (in this whole project or a copy of it) have to be pushed and not distributed themselves
+
+# Donation
 
 # Some Content
 
@@ -33,10 +41,8 @@ At the moment, only windows is supported. Other platforms will be added in the f
 - Monitors
 - ... (and more)
 
-# Keyboard
-- press Key
-- release Key
-- type Key
+## Keyboard
+- press / release / type Key
 - is Key pressed
 <br/><br/>
 - write text (Windows: uses unicode keys to write a character. Not the real keys)
@@ -50,10 +56,8 @@ At the moment, only windows is supported. Other platforms will be added in the f
 - register / unregister Listener (register could block until unregister is called from another thread)
 - block and unblock Keyboard (May only work if keyboard listener is activated)
 
-# Mouse
-- press Mouse Button
-- release Mouse Button
-- type Mouse Button
+## Mouse
+- press / release / type Mouse Button
 - move Mouse
 - scroll
 - horizontal scroll
@@ -62,7 +66,7 @@ At the moment, only windows is supported. Other platforms will be added in the f
 - register / unregister Listener (register could block until unregister is called from another thread)
 - block and unblock Mouse (May only work if keyboard listener is activated)
 
-# Window
+## Window
 - get Window in Foreground
 - get all User Windows (Users Windows in Windows are for example all windows, which are shown in ALT+TAB)
 - get all Windows
@@ -73,11 +77,9 @@ At the moment, only windows is supported. Other platforms will be added in the f
 - to Front / Back
 - close
 <br/><br/>
-- maximize
-- minimize
+- maximize / is Maximized
+- minimize / is Minimized
 - restore
-- is Maximized
-- is Minimized
 <br/><br/>
 - hide
 - show
@@ -85,8 +87,7 @@ At the moment, only windows is supported. Other platforms will be added in the f
 - Listeners: maximized/minimized/restore/move/resize/foreground changed (Move, resize and restore events might all be triggered by one of these users actions)
 - register / unregister Listener (register could block until unregister is called from another thread)
 
-
-# Display
+## Display
 - get Primary Display
 - get all Display
 - get Area (x, y, width, height)
@@ -96,14 +97,11 @@ At the moment, only windows is supported. Other platforms will be added in the f
 ## Could I help?
 Everyone is welcome to help. You can add/edit/repair some codes. Add/Remove/Edit/Correct some comments. And more.
 If you have a jni platform project of this (like Windows, Linux, MacOS, etc...) and want to add this officially. Please contact me.
-If you want a jni platform project to work on it. You could create a project in your repositories or I could create a project for you (and add you as a collibarator).
+If you want a jni platform project to work on it. You could create a project in your repositories or I could create a project for you (and add you as a collaborator).
 
 ## Can I use it for my project?
 Yes. This is a open source project. You could use it in your own project. It's free to use.<br/>
-Rules:
-- Read the License (if it exists)
-- Do not say that the whole project was written by your own
-- Extensions and bug fixes have to be pushed and not distributed themselves
+See Rules.
 
 ## I have some new ideas/bugs
 If you have some new ideas or bugs, please create a issues for it or write it on discord.

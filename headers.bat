@@ -9,6 +9,8 @@ javac -h c -d target src/crossplatformapi/jni/window/WindowListener.java
 
 javac -h c -d target src/crossplatformapi/jni/display/NativeDisplay.java
 
+javac -h c -d target src/crossplatformapi/jni/process/NativeProcess.java
+
 javac -h c -d target src/crossplatformapi/jni/network/Network.java
 
 javac -h c -d target src/crossplatformapi/jni/stats/PowerStates.java
