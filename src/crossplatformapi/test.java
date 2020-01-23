@@ -1,8 +1,12 @@
 package crossplatformapi;
 
-import java.io.IOException;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
 
+import crossplatformapi.jni.display.NativeDisplay;
 import crossplatformapi.jni.mouse.NativeMouse;
+import crossplatformapi.main.display.Display;
+import crossplatformapi.main.display.Displays;
 import crossplatformapi.main.os.LibraryLoader;
 
 public class test {
@@ -13,9 +17,27 @@ public class test {
 //		System.getProperties().list(System.out);
 		
 		LibraryLoader.loadLibrary();
-		mouseMoveInCircle();
+//		mouseMoveInCircle();
 		
-
+//		GraphicsEnvironment g = GraphicsEnvironment.getLocalGraphicsEnvironment();
+//		GraphicsDevice[] devices = g.getScreenDevices();
+//
+//		for (int i = 0; i < devices.length; i++) {
+//		    System.out.println("Width:" + devices[i].getFullScreenWindow());
+//		    System.out.println("Height:" + devices[i].getDisplayMode().getHeight());
+//		}
+		
+		System.out.println(Long.MIN_VALUE);
+		
+		for(Display l : Displays.getDisplays()) {
+			System.out.println(l.getWidth());
+			System.out.println(l.getBrightness());
+			System.out.println(l.getMinBrightness());
+			System.out.println(l.getMaxBrightness());
+		}
+		
+		
+		
 //		Mouse.hscroll(120);
 		
 //		new Thread(() -> {

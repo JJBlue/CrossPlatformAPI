@@ -1,12 +1,18 @@
 javac -h c -d target java/dad/HelloWorld.java		//Create the header of a .class file
 
+Check if it exist in Java, bevor adding
+
 TODO:
 
 Network
 	- Name
 	- Disable
 	- WLAN/LAN enabled?
-
+Display
+	- brightness
+	- off?
+Power/Notebook
+	- current power / akku
 ...
 
 

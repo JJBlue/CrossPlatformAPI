@@ -8,7 +8,9 @@ Use it for your own risk.
 # Rules
 - Read the License (if it exists)
 - Do not say that the whole project was written by your own
-- Extensions and bug fixes (in a copy/fork of it) have to be pushed and not distributed themselves
+- Extensions and bug fixes (in a copy/fork of it) have to be pushed and not distributed themselves<br>
+	- So that in the end there are not 20 forks, wich all contain different bugs.<br>
+	- Projects that use this as an API (external plugin) do not have to be published.
 - Please do not add @author. If someone else edits the code, chaos will occur.
 - Please be nice. For example, if you post a problem.
 

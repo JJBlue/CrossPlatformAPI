@@ -5,7 +5,7 @@ import crossplatformapi.jni.window.NativeWindow;
 
 public class Window implements IWindow {
 	
-	long window;
+	protected long window;
 	
 	public Window(long window) {
 		this.window = window;
@@ -81,5 +81,16 @@ public class Window implements IWindow {
 	
 	public void close() {
 		NativeWindow.close(window);
+	}
+	
+	public long getID() {
+		return window;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Window)
+			return ((Window) obj).window == window;
+		return false;
 	}
 }
