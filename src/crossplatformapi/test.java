@@ -1,15 +1,13 @@
 package crossplatformapi;
 
-import java.awt.GraphicsDevice;
-import java.awt.GraphicsEnvironment;
-
-import crossplatformapi.jni.display.NativeDisplay;
+import components.eventmanagers.managerclasses.EventHandler;
 import crossplatformapi.jni.mouse.NativeMouse;
 import crossplatformapi.main.display.Display;
 import crossplatformapi.main.display.Displays;
 import crossplatformapi.main.os.LibraryLoader;
 
 public class test {
+	@EventHandler
 	public static void main(String[] args) {
 		
 		//0000000004070407 1031 1031
@@ -17,7 +15,7 @@ public class test {
 //		System.getProperties().list(System.out);
 		
 		LibraryLoader.loadLibrary();
-//		mouseMoveInCircle();
+//		mouseMoveInCircle();		
 		
 //		GraphicsEnvironment g = GraphicsEnvironment.getLocalGraphicsEnvironment();
 //		GraphicsDevice[] devices = g.getScreenDevices();

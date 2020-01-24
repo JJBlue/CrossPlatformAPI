@@ -14,6 +14,9 @@ Use it for your own risk.
 - Please do not add @author. If someone else edits the code, chaos will occur.
 - Please be nice. For example, if you post a problem.
 
+# Wiki
+To the [Wiki](https://github.com/JJBlue/CrossPlatformAPI/wiki)
+
 # About me
 I'm a student and work on this project in my free time.
 

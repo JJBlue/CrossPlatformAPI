@@ -13,6 +13,8 @@ Display
 	- off?
 Power/Notebook
 	- current power / akku
+Mouse
+	- event hotkey
 ...
 
 
