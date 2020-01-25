@@ -29,6 +29,7 @@ hs_err_pid*
 .project
 target/
 /copy.bat
+*test.java
 
 # Eclipse
 org.eclipse.*
