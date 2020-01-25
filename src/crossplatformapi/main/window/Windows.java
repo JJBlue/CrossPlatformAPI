@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import crossplatformapi.jni.window.NativeWindow;
+import crossplatformapi.jni.window.WindowListener;
 
 public class Windows {
 	public static Window getWindowInForeground() {
@@ -11,9 +12,9 @@ public class Windows {
 	}
 	
 	/**
-	 * @return should return windows, wich are user windows.
+	 * @return should return windows, which are user windows.
 	 * For example, the taskbar is not a user window.
-	 * Users Windows in Windows are for example all windows, wich are shown in ALT+TAB
+	 * Users Windows in Windows are for example all windows, which are shown in ALT+TAB
 	 */
 	public static List<Window> getUserWindows() {
 		List<Window> list = new LinkedList<>();
@@ -36,5 +37,13 @@ public class Windows {
 		}
 		
 		return list;
+	}
+	
+	public static void registerListener() {
+		WindowListener.registerListener();
+	}
+	
+	public static void unregisterListener() {
+		WindowListener.unregisterListener();
 	}
 }

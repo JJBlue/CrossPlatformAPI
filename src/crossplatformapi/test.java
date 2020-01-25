@@ -2,19 +2,23 @@ package crossplatformapi;
 
 import components.eventmanagers.managerclasses.EventHandler;
 import crossplatformapi.jni.mouse.NativeMouse;
-import crossplatformapi.main.display.Display;
-import crossplatformapi.main.display.Displays;
 import crossplatformapi.main.os.LibraryLoader;
+import crossplatformapi.main.window.Window;
 
 public class test {
 	@EventHandler
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		//0000000004070407 1031 1031
 		System.out.println("start");
 //		System.getProperties().list(System.out);
 		
 		LibraryLoader.loadLibrary();
+		
+		Thread.sleep(5000);
+		
+		new Window(66828).minimize();
+		
 //		mouseMoveInCircle();		
 		
 //		GraphicsEnvironment g = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -25,14 +29,14 @@ public class test {
 //		    System.out.println("Height:" + devices[i].getDisplayMode().getHeight());
 //		}
 		
-		System.out.println(Long.MIN_VALUE);
-		
-		for(Display l : Displays.getDisplays()) {
-			System.out.println(l.getWidth());
-			System.out.println(l.getBrightness());
-			System.out.println(l.getMinBrightness());
-			System.out.println(l.getMaxBrightness());
-		}
+//		System.out.println(Long.MIN_VALUE);
+//		
+//		for(Display l : Displays.getDisplays()) {
+//			System.out.println(l.getWidth());
+//			System.out.println(l.getBrightness());
+//			System.out.println(l.getMinBrightness());
+//			System.out.println(l.getMaxBrightness());
+//		}
 		
 		
 		
