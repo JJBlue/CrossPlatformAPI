@@ -1,18 +1,19 @@
 # CrossPlatformAPI
 
-Some useful JNI functions that Java does not yet support or supported different.<br>
-Maybe not all functions work on all platforms.<br>
-Methods and Classes could be changed in the future. Everything is subject to change.<br>
-Use it for your own risk.
+Some useful JNI functions that Java does not support yet or supports differently.<br>
+*Not all functions may work on all platforms.*<br>
+Methods and Classes could change or even be deleted in the future. Everything is subject to change.<br>
+Use this API at your own risk.
 
 # Rules
 - Read the License (if it exists)
-- Do not say that the whole project was written by your own
+- Do not claim this code as your own
 - Extensions and bug fixes (in a copy/fork of it) have to be pushed and not distributed themselves<br>
 	- So that in the end there are not 20 forks, wich all contain different bugs.<br>
 	- Projects that use this as an API (external plugin) do not have to be published.
-- Please do not add @author. If someone else edits the code, chaos will occur.
+- Please do not add @author. If someone else edits the code, chaos will occur. Every code change is mentioned on Github with the author
 - Please be nice. For example, if you post a problem.
+- Do not post security critical information in an issue. Use the Security tab on Github instead
 
 # Wiki
 To the [Wiki](https://github.com/JJBlue/CrossPlatformAPI/wiki)
@@ -40,7 +41,9 @@ At the moment, only windows is supported. Other platforms will be added in the f
 
 # Donation
 
-# Some Content
+Nothing here yet...
+
+# Content overview
 
 - Keyboard
 - Mouse
@@ -111,4 +114,4 @@ Yes. This is a open source project. You could use it in your own project. It's f
 See Rules.
 
 ## I have some new ideas/bugs
-If you have some new ideas or bugs, please create a issues for it or write it on discord.
+If you have some new ideas or bugs, please create a issues (or a pull request) for it or write it on discord.
