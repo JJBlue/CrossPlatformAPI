@@ -28,4 +28,7 @@ public class NativeDisplay {
 	public native static long getBrightness(long display);
 	public native static long getMinBrightness(long display);
 	public native static long getMaxBrightness(long display);
+	
+	public native static void turnOffMonitors();
+	public native static void turnOnMonitors();
 }

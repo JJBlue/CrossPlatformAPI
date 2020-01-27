@@ -2,14 +2,13 @@ package crossplatformapi.jni.battery;
 
 public class NativeBattery {
 	
-	public native static long getMinimumCapacity();
-	public native static long getCapacity();
-	public native static long getMaximumCapacity();
+	public native static void test();
 	
-	public native static boolean isCharging();
-	public native static boolean isDischarging();
-	public native static boolean isCritical();
+	public native static long getCapacityInPercent();
 	
 	//Indicates that the battery has access to AC power.
 	public native static boolean isPowerOnLine();
+	
+	public native static boolean isBatterySaverOn();
+	public native static void setBatterySaverOn(boolean value);
 }
