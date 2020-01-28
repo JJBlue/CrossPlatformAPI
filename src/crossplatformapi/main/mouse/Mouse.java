@@ -31,11 +31,11 @@ public class Mouse {
 		NativeMouse.hscroll(delta);
 	}
 	
-	public static void registerListener() {
+	public synchronized static void registerListener() {
 		NativeMouseListener.register();
 	}
 	
-	public static void unregisterListener() {
+	public synchronized static void unregisterListener() {
 		NativeMouseListener.unregister();
 	}
 	

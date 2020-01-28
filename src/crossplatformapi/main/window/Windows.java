@@ -39,11 +39,11 @@ public class Windows {
 		return list;
 	}
 	
-	public static void registerListener() {
+	public synchronized static void registerListener() {
 		NativeWindowListener.register();
 	}
 	
-	public static void unregisterListener() {
+	public synchronized static void unregisterListener() {
 		NativeWindowListener.unregister();
 	}
 }

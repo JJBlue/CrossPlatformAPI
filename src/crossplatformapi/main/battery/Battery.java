@@ -21,11 +21,11 @@ public class Battery {
 		NativeBattery.setBatterySaverOn(value);
 	}
 	
-	public static void registerListener() {
+	public synchronized static void registerListener() {
 		NativeBatteryListener.register();
 	}
 	
-	public static void unregisterListener() {
+	public synchronized static void unregisterListener() {
 		NativeBatteryListener.unregister();
 	}
 }

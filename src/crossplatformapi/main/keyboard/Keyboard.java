@@ -42,11 +42,11 @@ public class Keyboard {
 	/**
 	 * register is maybe async?? TODO: Programming in JAVA, because Windows will never return from this function until unregisterKeyListener() will be called
 	 */
-	public static void registerListener() {
+	public synchronized static void registerListener() {
 		NativeKeyboardListener.register();
 	}
 	
-	public static void unregisterListener() {
+	public synchronized static void unregisterListener() {
 		NativeKeyboardListener.unregister();
 	}
 	
