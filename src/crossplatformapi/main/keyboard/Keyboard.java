@@ -1,7 +1,7 @@
 package crossplatformapi.main.keyboard;
 
 import crossplatformapi.interfaces.keyboard.IKeyboard;
-import crossplatformapi.jni.keyboard.KeyboardListener;
+import crossplatformapi.jni.keyboard.NativeKeyboardListener;
 import crossplatformapi.jni.keyboard.NativeKeyboard;
 import crossplatformapi.main.os.OS;
 
@@ -43,19 +43,19 @@ public class Keyboard {
 	 * register is maybe async?? TODO: Programming in JAVA, because Windows will never return from this function until unregisterKeyListener() will be called
 	 */
 	public static void registerListener() {
-		KeyboardListener.register();
+		NativeKeyboardListener.register();
 	}
 	
 	public static void unregisterListener() {
-		KeyboardListener.unregister();
+		NativeKeyboardListener.unregister();
 	}
 	
 	public static void block() {
-		KeyboardListener.block();
+		NativeKeyboardListener.block();
 	}
 	
 	public static void unblock() {
-		KeyboardListener.unblock();
+		NativeKeyboardListener.unblock();
 	}
 	
 	public static IKeyboard getKeyboard() {

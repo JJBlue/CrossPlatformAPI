@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import crossplatformapi.jni.window.NativeWindow;
-import crossplatformapi.jni.window.WindowListener;
+import crossplatformapi.jni.window.NativeWindowListener;
 
 public class Windows {
 	public static Window getWindowInForeground() {
@@ -40,10 +40,10 @@ public class Windows {
 	}
 	
 	public static void registerListener() {
-		WindowListener.registerListener();
+		NativeWindowListener.register();
 	}
 	
 	public static void unregisterListener() {
-		WindowListener.unregisterListener();
+		NativeWindowListener.unregister();
 	}
 }

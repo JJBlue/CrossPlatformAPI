@@ -1,7 +1,7 @@
 package crossplatformapi.main.mouse;
 
 import crossplatformapi.interfaces.mouse.IMouse;
-import crossplatformapi.jni.mouse.MouseListener;
+import crossplatformapi.jni.mouse.NativeMouseListener;
 import crossplatformapi.jni.mouse.NativeMouse;
 import crossplatformapi.main.os.OS;
 
@@ -32,19 +32,19 @@ public class Mouse {
 	}
 	
 	public static void registerListener() {
-		MouseListener.registerListener();
+		NativeMouseListener.register();
 	}
 	
 	public static void unregisterListener() {
-		MouseListener.unregisterListener();
+		NativeMouseListener.unregister();
 	}
 	
 	public static void block() {
-		MouseListener.block();
+		NativeMouseListener.block();
 	}
 	
 	public static void unblock() {
-		MouseListener.unblock();
+		NativeMouseListener.unblock();
 	}
 	
 	public static IMouse getMouse() {

@@ -1,6 +1,6 @@
 package crossplatformapi.jni.keyboard;
 
-public class KeyboardListener {
+public class NativeKeyboardListener {
 	public native static void register();
 	public native static void unregister();
 	

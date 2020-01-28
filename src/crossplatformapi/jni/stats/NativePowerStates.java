@@ -1,6 +1,6 @@
 package crossplatformapi.jni.stats;
 
-public class PowerStates {
+public class NativePowerStates {
 	public native static void modernStandby(); //S0
 	public native static void standby(); //S1-3
 	public native static void hibernate(); //S4

@@ -1,6 +1,6 @@
 package crossplatformapi.main.battery;
 
-import crossplatformapi.jni.battery.BatteryListener;
+import crossplatformapi.jni.battery.NativeBatteryListener;
 import crossplatformapi.jni.battery.NativeBattery;
 
 public class Battery {
@@ -22,10 +22,10 @@ public class Battery {
 	}
 	
 	public static void registerListener() {
-		BatteryListener.register();
+		NativeBatteryListener.register();
 	}
 	
 	public static void unregisterListener() {
-		BatteryListener.unregister();
+		NativeBatteryListener.unregister();
 	}
 }
