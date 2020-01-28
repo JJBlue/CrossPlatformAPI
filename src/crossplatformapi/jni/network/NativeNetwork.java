@@ -1,6 +1,6 @@
 package crossplatformapi.jni.network;
 
-public class Network {
+public class NativeNetwork {
 	/**
 	 * @return if connected to any network
 	 */
