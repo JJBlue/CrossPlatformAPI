@@ -14,3 +14,6 @@ javac -h c -d target src/crossplatformapi/jni/network/Network.java
 javac -h c -d target src/crossplatformapi/jni/stats/PowerStates.java
 
 javac -h c -d target src/crossplatformapi/jni/battery/NativeBattery.java
+javac -h c -d target src/crossplatformapi/jni/battery/BatteryListener.java
+
+javac -h c -d target src/crossplatformapi/jni/debug/NativeDebug.java
