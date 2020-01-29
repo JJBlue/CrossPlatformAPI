@@ -7,5 +7,4 @@ public class NativeBattery {
 	public native static boolean isPowerOnLine();
 	
 	public native static boolean isBatterySaverOn();
-	public native static void setBatterySaverOn(boolean value);
 }

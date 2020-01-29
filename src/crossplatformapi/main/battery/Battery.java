@@ -17,10 +17,6 @@ public class Battery {
 		return NativeBattery.isBatterySaverOn();
 	}
 	
-	public static void setBatterySaverOn(boolean value) {
-		NativeBattery.setBatterySaverOn(value);
-	}
-	
 	public synchronized static void registerListener() {
 		NativeBatteryListener.register();
 	}
