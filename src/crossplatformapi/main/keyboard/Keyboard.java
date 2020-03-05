@@ -7,11 +7,19 @@ import crossplatformapi.main.os.OS;
 
 public class Keyboard {
 	public static void press(Key key) {
-		NativeKeyboard.pressKey(getKeyboard().keyToInt(key));
+		NativeKeyboard.press(getKeyboard().keyToInt(key));
+	}
+	
+	public static void press2(Key key) {
+		NativeKeyboard.press2(getKeyboard().keyToInt(key));
 	}
 	
 	public static void release(Key key) {
-		NativeKeyboard.releaseKey(getKeyboard().keyToInt(key));
+		NativeKeyboard.release(getKeyboard().keyToInt(key));
+	}
+	
+	public static void release2(Key key) {
+		NativeKeyboard.release2(getKeyboard().keyToInt(key));
 	}
 	
 	public static void type(Key key) {
