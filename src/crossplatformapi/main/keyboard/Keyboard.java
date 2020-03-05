@@ -15,8 +15,8 @@ public class Keyboard {
 	}
 	
 	public static void type(Key key) {
-		release(key);
 		press(key);
+		release(key);
 	}
 	
 	public static void write(String text) {
