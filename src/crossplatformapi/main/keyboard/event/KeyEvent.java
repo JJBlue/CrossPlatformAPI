@@ -19,15 +19,15 @@ public class KeyEvent extends Event {
 		key = Keyboard.getKeyboard().intToKey((int) keycode);
 	}
 		
-	long getKeyCode() {
+	public long getKeyCode() {
 		return keycode;
 	}
 	
-	Key getKey() {
+	public Key getKey() {
 		return key;
 	}
 	
-	ModifierValue modifierValue() {
+	public ModifierValue modifierValue() {
 		return new ModifierValue(modifier);
 	}
 }
