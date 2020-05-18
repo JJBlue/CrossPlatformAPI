@@ -1,6 +1,6 @@
 package crossplatformapi.main.keyboard.write;
 
-import components.map.TWMap;
+import crossplatformapi.components.TWMap;
 import crossplatformapi.main.keyboard.Key;
 import crossplatformapi.main.keyboard.Keyboard;
 import crossplatformapi.main.os.LibraryLoader;

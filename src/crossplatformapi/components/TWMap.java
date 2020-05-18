@@ -1,4 +1,4 @@
-package components.map;
+package crossplatformapi.components;
 
 import java.util.HashMap;
 import java.util.Map;

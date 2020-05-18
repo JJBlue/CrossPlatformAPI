@@ -1,6 +1,6 @@
 package crossplatformapi.os.windows.keyboard;
 
-import components.map.TWMap;
+import crossplatformapi.components.TWMap;
 import crossplatformapi.interfaces.keyboard.IKeyboard;
 import crossplatformapi.main.keyboard.Key;
 import crossplatformapi.main.keyboard.Modifier;

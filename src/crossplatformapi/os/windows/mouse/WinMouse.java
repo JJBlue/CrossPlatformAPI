@@ -1,6 +1,6 @@
 package crossplatformapi.os.windows.mouse;
 
-import components.map.TWMap;
+import crossplatformapi.components.TWMap;
 import crossplatformapi.interfaces.mouse.IMouse;
 import crossplatformapi.main.mouse.MouseButton;
 
