@@ -50,6 +50,7 @@ public class ModifierValue {
 		return modifiers;
 	}
 	
+	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		

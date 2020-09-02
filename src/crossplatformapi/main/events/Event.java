@@ -9,10 +9,12 @@ public class Event implements Serializable, EventInterface {
 	
 	private boolean cancel;
 
+	@Override
 	public void cancel(boolean wert) {
 		cancel = wert;
 	}
 
+	@Override
 	public boolean isCancelled() {
 		return cancel;
 	}

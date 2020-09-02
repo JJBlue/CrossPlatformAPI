@@ -9,7 +9,7 @@ public class EventManager {
 	private static ComplexEventManager<Listener, Event> manager;
 	
 	static {
-		manager = new ComplexEventManager<Listener, Event>();
+		manager = new ComplexEventManager<>();
 	}
 	
 	public static void register(Listener l) {
